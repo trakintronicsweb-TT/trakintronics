@@ -6,7 +6,6 @@ import {
   Zap, Cpu, Users, Award, Quote, Target, Eye,
   Rocket, GraduationCap, Calendar
 } from "lucide-react";
-import FounderImg from "./../assets/images/founder.jpg";
 import './About.css';
 import SEO from '../components/SEO';
 
@@ -233,70 +232,46 @@ export default function About() {
 
         {/* Founder Section */}
         <section className="py-12 md:py-16 lg:py-24 px-4 sm:px-6">
-          <div className="container mx-auto max-w-7xl">
+          <div className="container mx-auto max-w-4xl text-center">
             <motion.h2
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: "-50px" }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 md:mb-12 lg:mb-16"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-12 lg:mb-16"
             >
               Meet the <span className="animate-gradient">Founder</span>
             </motion.h2>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, margin: "-50px" }}
-                whileHover={{ rotateY: 5, rotateX: 5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-                className="relative group"
-              >
-                <div className="glow-border rounded-2xl md:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl">
-                  <img
-                    src={FounderImg}
-                    alt="Mr. Tejas Mendhe - Founder"
-                    className="w-full h-auto md:h-[400px] lg:h-[500px] object-cover zoom-hover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                  <div className="absolute bottom-4 md:bottom-6 lg:bottom-8 left-4 md:left-6 lg:left-8">
-                    <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">Tejas Mendhe</h3>
-                    <p className="text-cyan-300 text-sm md:text-base lg:text-lg">Founder & CEO</p>
-                  </div>
-                </div>
-              </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              className="space-y-6 md:space-y-8"
+            >
+              <div>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">Mr. Tejas Mendhe</h3>
+                <p className="text-lg md:text-xl lg:text-2xl text-cyan-400 mb-4 md:mb-6">Founder, CEO & Lead Engineer</p>
+                <p className="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
+                  With over <strong>10 years</strong> of expertise in embedded systems, PCB design, IoT, robotics, and industrial automation, Tejas founded TRAKIN TRONICS to bridge the gap between theory and real-world engineering.
+                </p>
+                <p className="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed mt-4 md:mt-6">
+                  His mission: empower the next generation with hands-on skills that industries actually need.
+                </p>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                className="space-y-6 md:space-y-8"
-              >
-                <div>
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">Mr. Tejas Mendhe</h3>
-                  <p className="text-lg md:text-xl lg:text-2xl text-cyan-400 mb-4 md:mb-6">Founder, CEO & Lead Engineer</p>
-                  <p className="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
-                    With over <strong>10 years</strong> of expertise in embedded systems, PCB design, IoT, robotics, and industrial automation, Tejas founded TRAKIN TRONICS to bridge the gap between theory and real-world engineering.
-                  </p>
-                  <p className="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed mt-4 md:mt-6">
-                    His mission: empower the next generation with hands-on skills that industries actually need.
-                  </p>
+              <div className="grid grid-cols-2 gap-4 md:gap-6 max-w-2xl mx-auto">
+                <div ref={projectsRef} className="glass rounded-xl md:rounded-2xl p-4 md:p-6 text-center">
+                  <Rocket className="w-8 h-8 md:w-10 md:h-10 text-cyan-400 mx-auto mb-2 md:mb-3" />
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold">{projects}+</div>
+                  <p className="text-gray-400 text-sm md:text-base">Projects</p>
                 </div>
-
-                <div className="grid grid-cols-2 gap-4 md:gap-6">
-                  <div ref={projectsRef} className="glass rounded-xl md:rounded-2xl p-4 md:p-6 text-center">
-                    <Rocket className="w-8 h-8 md:w-10 md:h-10 text-cyan-400 mx-auto mb-2 md:mb-3" />
-                    <div className="text-2xl sm:text-3xl md:text-4xl font-bold">{projects}+</div>
-                    <p className="text-gray-400 text-sm md:text-base">Projects</p>
-                  </div>
-                  <div ref={studentsRef} className="glass rounded-xl md:rounded-2xl p-4 md:p-6 text-center">
-                    <GraduationCap className="w-8 h-8 md:w-10 md:h-10 text-purple-400 mx-auto mb-2 md:mb-3" />
-                    <div className="text-2xl sm:text-3xl md:text-4xl font-bold">{students}+</div>
-                    <p className="text-gray-400 text-sm md:text-base">Students Trained</p>
-                  </div>
+                <div ref={studentsRef} className="glass rounded-xl md:rounded-2xl p-4 md:p-6 text-center">
+                  <GraduationCap className="w-8 h-8 md:w-10 md:h-10 text-purple-400 mx-auto mb-2 md:mb-3" />
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold">{students}+</div>
+                  <p className="text-gray-400 text-sm md:text-base">Students Trained</p>
                 </div>
-              </motion.div>
-            </div>
+              </div>
+            </motion.div>
           </div>
         </section>
 
