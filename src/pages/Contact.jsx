@@ -178,7 +178,7 @@ const SEOHead = () => {
 const MapSection = lazy(() => Promise.resolve({
   default: () => {
     const googleMapsLink = "https://maps.app.goo.gl/87FPPkBkieTraBLe9";
-    const locationEmbed = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.0415806484055!2d77.76054757507517!3d21.14392188052523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd6b9e92f2a9e75%3A0x996b4373d7a41b57!2sTRKIN%20TRONICS!5e0!3m2!1sen!2sin!4v1733546565475!5m2!1sen!2sin";
+    const locationEmbed = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.1750088536314!2d77.76658599999998!3d20.945485899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd6a37d1e77fef3%3A0x6404f7ec7553723c!2sT%20T%20Electronics!5e0!3m2!1sen!2sin!4v1777415228151!5m2!1sen!2sin";
 
     return (
       <div className="glass glow-border rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 h-[400px] sm:h-[450px] md:h-[500px] overflow-hidden">
@@ -245,7 +245,7 @@ const BUSINESS_INFO = {
   address: "Amravati, Maharashtra - 444601",
   location: {
     link: "https://maps.app.goo.gl/87FPPkBkieTraBLe9",
-    embed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.0415806484055!2d77.76054757507517!3d21.14392188052523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd6b9e92f2a9e75%3A0x996b4373d7a41b57!2sTRKIN%20TRONICS!5e0!3m2!1sen!2sin!4v1733546565475!5m2!1sen!2sin"
+    embed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.1750088536314!2d77.76658599999998!3d20.945485899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd6a37d1e77fef3%3A0x6404f7ec7553723c!2sT%20T%20Electronics!5e0!3m2!1sen!2sin!4v1777415228151!5m2!1sen!2sin"
   }
 };
 

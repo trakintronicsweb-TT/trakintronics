@@ -176,6 +176,8 @@ export default function Home() {
                   src={heroImage}
                   alt="Electronics Workshop"
                   className="w-full h-auto object-cover zoom-hover"
+                  loading="eager"
+                  fetchpriority="high"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
