@@ -132,7 +132,7 @@ export default function Home() {
               </h1>
 
               <p className="text-2xl md:text-4xl text-cyan-300 font-light mb-8">
-                Learn, Explore, Innovate
+                Learn, Explore, Share
               </p>
 
               <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl">
