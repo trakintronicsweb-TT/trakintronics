@@ -2,8 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function SEO({ title, description, keywords, url }) {
-  const siteName = "Trakin Tronics";
-  const fullTitle = title ? `${title} | ${siteName}` : siteName;
+  const siteName = "TRAKIN TRONICS";
+  const fullTitle = title === "Home" 
+    ? "TRAKIN TRONICS | Best Electronics & College Projects in Amravati" 
+    : title ? `${title} | ${siteName} Amravati` : siteName;
 
   return (
     <Helmet>

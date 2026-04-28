@@ -126,13 +126,17 @@ export default function Home() {
                 <span className="text-cyan-400 text-sm font-medium">Pioneering Electronics Since 2017</span>
               </div>
 
-              <h1 className="text-6xl md:text-8xl font-black mb-6 leading-tight">
+              <h1 className="text-6xl md:text-8xl font-black mb-2 leading-tight">
                 <span className="animate-gradient">TRAKIN</span>
                 <span className="text-white"> TRONICS</span>
               </h1>
+              
+              <h2 className="text-xl md:text-2xl text-white font-semibold mb-6">
+                Best Electronics & College Projects in Amravati
+              </h2>
 
               <p className="text-2xl md:text-4xl text-cyan-300 font-light mb-8">
-                Learn, Explore, Share
+                Learn • Explore • Share
               </p>
 
               <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl">
