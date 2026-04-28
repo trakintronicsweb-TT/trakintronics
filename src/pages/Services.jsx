@@ -112,7 +112,7 @@ export default function Services() {
   ];
 
   const stats = [
-    { number: "2500+", label: "Projects Delivered", icon: <Cpu className="w-7 h-7" /> },
+    { number: "25000+", label: "Projects Delivered", icon: <Cpu className="w-7 h-7" /> },
     { number: "98%", label: "Client Satisfaction", icon: <Star className="w-7 h-7" fill="currentColor" /> },
     { number: "50+", label: "Industry Partners", icon: <Users className="w-7 h-7" /> },
     { number: "24/7", label: "Support", icon: <Clock className="w-7 h-7" /> },

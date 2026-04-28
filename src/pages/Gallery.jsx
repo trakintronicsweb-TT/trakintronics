@@ -96,7 +96,7 @@ const categories = [
 
 // Stats data
 const stats = [
-  { number: '2500+', label: 'Projects Completed' },
+  { number: '25000+', label: 'Projects Completed' },
   { number: '75+', label: 'Clients Served' },
   { number: '98%', label: 'Satisfaction Rate' },
   { number: '24/7', label: 'Support Available' },
@@ -355,7 +355,7 @@ const Gallery = () => {
       transition={{ duration: 0.5 }}
       className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-gray-200"
     >
-      <SEO title="Gallery" description="Explore TRAKIN TRONICS' electronics project portfolio — 2500+ projects, workshops, internship photos & video demos. Amravati's best electronics lab." />
+      <SEO title="Gallery" description="Explore TRAKIN TRONICS' electronics project portfolio — 25000+ projects, workshops, internship photos & video demos. Amravati's best electronics lab." />
       {/* Fixed padding top to account for navbar */}
       <div className="pt-24">
         {/* Hero */}

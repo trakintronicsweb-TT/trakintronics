@@ -80,7 +80,7 @@ export default function About() {
   const { scrollYProgress } = useScroll();
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
-  const [projects, projectsRef] = useCountUp(2500);
+  const [projects, projectsRef] = useCountUp(25000);
   const [students, studentsRef] = useCountUp(3000);
   const [institutions, instRef] = useCountUp(20);
   const [experience, expRef] = useCountUp(10);
@@ -91,7 +91,7 @@ export default function About() {
     { year: "2019", title: "1000+ Students", desc: "Crossed major training milestone" },
     { year: "2021", title: "Industrial Projects", desc: "Began automation & IoT solutions" },
     { year: "2023", title: "20+ Institutions", desc: "Partnered with colleges across MH" },
-    { year: "2025", title: "2500+ Projects", desc: "Delivered 2500+ successful projects" },
+    { year: "2025", title: "25000+ Projects", desc: "Delivered 25000+ successful projects" },
   ];
 
   const whyChooseUs = [

@@ -72,7 +72,7 @@ export default function Home() {
   ];
 
   const stats = [
-    { value: "2500+", label: "Projects Completed", icon: <Rocket className="w-8 h-8 mx-auto" /> },
+    { value: "25000+", label: "Projects Completed", icon: <Rocket className="w-8 h-8 mx-auto" /> },
     { value: "3000+", label: "Students Trained", icon: <GraduationCap className="w-8 h-8 mx-auto" /> },
     { value: "20+", label: "Partner Institutions", icon: <Award className="w-8 h-8 mx-auto" /> },
     { value: "10+", label: "Years Experience", icon: <Clock className="w-8 h-8 mx-auto" /> }
@@ -86,7 +86,7 @@ export default function Home() {
       transition={{ duration: 0.5 }}
       className="min-h-screen bg-gradient-to-b from-black via-gray-950 to-gray-900 text-white overflow-x-hidden"
     >
-      <SEO title="Home" description="TRAKIN TRONICS — Amravati's #1 electronics lab for workshops, college projects, internships, IoT, PCB design, robotics & industrial automation. 2500+ projects delivered." />
+      <SEO title="Home" description="TRAKIN TRONICS — Amravati's #1 electronics lab for workshops, college projects, internships, IoT, PCB design, robotics & industrial automation. 25000+ projects delivered." />
 
       {/* Floating Particles */}
       <div className="fixed inset-0 pointer-events-none z-0">
