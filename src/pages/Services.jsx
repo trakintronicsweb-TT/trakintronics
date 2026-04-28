@@ -151,7 +151,7 @@ export default function Services() {
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="flex flex-col sm:flex-row gap-5 justify-center">
-            <a href="/brochure.html" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold flex items-center justify-center gap-3 hover:scale-105 transition">
+            <a href="/brochure.html?download=true" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold flex items-center justify-center gap-3 hover:scale-105 transition">
               <Download className="w-5 h-5" /> Download Brochure
             </a>
             <Link to="/contact" className="px-8 py-4 border border-gray-600 rounded-xl font-semibold hover:bg-gray-800/50 transition flex items-center justify-center gap-3">
