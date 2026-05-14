@@ -282,7 +282,9 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className={`group relative glass rounded-[2.5rem] p-8 md:p-10 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20 overflow-hidden ${feature.bg}`}
+                whileTap={{ scale: 0.98 }}
+                onClick={handleLearnMoreClick}
+                className={`group relative glass rounded-[2.5rem] p-8 md:p-10 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20 overflow-hidden cursor-pointer ${feature.bg}`}
               >
                 {/* Decorative Gradient Background on Hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -302,17 +304,14 @@ export default function Home() {
                 </p>
 
                 {/* Interactive Action Area */}
-                <motion.div
-                  onClick={handleLearnMoreClick}
-                  className="flex items-center justify-between pt-6 border-t border-white/5 cursor-pointer"
-                >
+                <div className="flex items-center justify-between pt-6 border-t border-white/5">
                   <span className={`text-sm font-bold uppercase tracking-wider ${feature.color}`}>
                     Discover More
                   </span>
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center border border-white/10 group-hover:bg-current group-hover:border-transparent transition-all duration-300`}>
                     <ArrowRight className={`w-5 h-5 group-hover:text-black transition-colors`} />
                   </div>
-                </motion.div>
+                </div>
 
                 {/* Animated Border Glow */}
                 <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent w-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
