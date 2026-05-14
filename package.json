@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@vercel/speed-insights": "^2.0.0",
     "aos": "^2.3.4",
     "framer-motion": "^12.23.25",
     "lucide-react": "^0.555.0",
