@@ -14,8 +14,3 @@
   }
 }
 
-/* Optimization for faster text display */
-@font-face {
-  font-family: 'Inter';
-  font-display: swap;
-}
