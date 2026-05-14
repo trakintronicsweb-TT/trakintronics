@@ -17,7 +17,7 @@ export default function Home() {
 
   // Navigation handler for Learn More buttons
   const handleLearnMoreClick = () => {
-    navigate('/about');
+    navigate('/services');
   };
 
   // Mouse move handler for card glow effect
