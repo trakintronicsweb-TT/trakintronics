@@ -52,6 +52,7 @@ import project13 from './../assets/images/Project/Project13.jpeg';
 import project14 from './../assets/images/Project/Project14.jpeg';
 import project15 from './../assets/images/Project/Project15.jpeg';
 import project16 from './../assets/images/Project/Project16.jpeg';
+import project17 from './../assets/images/Project/Project17.jpeg';
 import project18 from './../assets/images/Project/Project18.jpeg';
 import project19 from './../assets/images/Project/Project19.jpeg';
 
