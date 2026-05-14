@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { AnimatePresence } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -56,6 +57,7 @@ function App() {
         <AnimatedRoutes />
       </main>
       <Footer />
+      <SpeedInsights />
     </Router>
   );
 }
