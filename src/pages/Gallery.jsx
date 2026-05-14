@@ -52,9 +52,23 @@ import project13 from './../assets/images/Project/Project13.jpeg';
 import project14 from './../assets/images/Project/Project14.jpeg';
 import project15 from './../assets/images/Project/Project15.jpeg';
 import project16 from './../assets/images/Project/Project16.jpeg';
-import project17 from './../assets/images/Project/Project17.jpeg';
 import project18 from './../assets/images/Project/Project18.jpeg';
 import project19 from './../assets/images/Project/Project19.jpeg';
+
+// Import 3D Printing Images (13 images)
+import print1 from './../assets/images/3D Printing/1.jpg';
+import print2 from './../assets/images/3D Printing/2.jpg';
+import print3 from './../assets/images/3D Printing/3.jpg';
+import print4 from './../assets/images/3D Printing/4.jpg';
+import print5 from './../assets/images/3D Printing/5.jpg';
+import print6 from './../assets/images/3D Printing/6.jpg';
+import print7 from './../assets/images/3D Printing/7.jpg';
+import print8 from './../assets/images/3D Printing/8.jpg';
+import print9 from './../assets/images/3D Printing/9.jpg';
+import print10 from './../assets/images/3D Printing/10.jpg';
+import print11 from './../assets/images/3D Printing/11.jpg';
+import print12 from './../assets/images/3D Printing/12.jpg';
+import print13 from './../assets/images/3D Printing/13.jpg';
 
 // Icons Components
 const CameraIcon = () => (
@@ -90,6 +104,7 @@ const categories = [
   { id: 'all', label: 'All Projects', icon: <AllIcon /> },
   { id: 'workshop', label: 'Workshops', icon: <CameraIcon /> },
   { id: 'internship', label: 'Internships', icon: <CameraIcon /> },
+  { id: '3dprinting', label: '3D Printing', icon: <CameraIcon /> },
   { id: 'services', label: 'Services', icon: <ServiceIcon /> },
   { id: 'videos', label: 'Videos', icon: <PlayIcon /> },
 ];
@@ -179,6 +194,23 @@ const projectImages = [
   generatePhotoItem(318, 'System Integration Project', 'services', project19, 'Complete system integration'),
 ];
 
+// 3D Printing Images Array (13 images)
+const printingImages = [
+  generatePhotoItem(401, '3D Printed Prototype 1', '3dprinting', print1, 'High precision 3D printed model'),
+  generatePhotoItem(402, '3D Printed Prototype 2', '3dprinting', print2, 'Custom 3D printed enclosure'),
+  generatePhotoItem(403, '3D Printed Prototype 3', '3dprinting', print3, 'Mechanical part 3D print'),
+  generatePhotoItem(404, '3D Printed Prototype 4', '3dprinting', print4, 'Functional 3D printed component'),
+  generatePhotoItem(405, '3D Printed Prototype 5', '3dprinting', print5, 'Complex geometry 3D print'),
+  generatePhotoItem(406, '3D Printed Prototype 6', '3dprinting', print6, 'Material testing 3D print'),
+  generatePhotoItem(407, '3D Printed Prototype 7', '3dprinting', print7, 'Architectural 3D model'),
+  generatePhotoItem(408, '3D Printed Prototype 8', '3dprinting', print8, 'Medical 3D print model'),
+  generatePhotoItem(409, '3D Printed Prototype 9', '3dprinting', print9, 'Consumer product prototype'),
+  generatePhotoItem(410, '3D Printed Prototype 10', '3dprinting', print10, 'Industrial 3D print'),
+  generatePhotoItem(411, '3D Printed Prototype 11', '3dprinting', print11, 'Educational 3D print'),
+  generatePhotoItem(412, '3D Printed Prototype 12', '3dprinting', print12, 'Robot chassis 3D print'),
+  generatePhotoItem(413, '3D Printed Prototype 13', '3dprinting', print13, 'Custom tool 3D print'),
+];
+
 // Gallery content - REMOVED SVG cards (Advanced PCB Design, Industrial Robotics Arm, Smart IoT Hub, High Power SMPS)
 const galleryItems = [
   // Workshop Images
@@ -189,6 +221,9 @@ const galleryItems = [
 
   // Project Services Images
   ...projectImages,
+
+  // 3D Printing Images
+  ...printingImages,
 
   // Videos from Trakin Tronics YouTube channel
   generateVideoItem(5, 'Introduction To IOT & Arduino Sensors', 'videos', 'https://www.youtube.com/embed/th4Dqtdsqho', 'https://img.youtube.com/vi/th4Dqtdsqho/hqdefault.jpg'),
@@ -455,6 +490,14 @@ const Gallery = () => {
             <CuratedSection
               title="Project Services (19 Projects)"
               items={projectImages}
+              columns={4}
+              onClick={handleItemClick}
+            />
+
+            {/* 3D Printing Section */}
+            <CuratedSection
+              title="3D Printing Hub (13 Models)"
+              items={printingImages}
               columns={4}
               onClick={handleItemClick}
             />
