@@ -349,6 +349,16 @@ const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedItem, setSelectedItem] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(12);
+
+  // Reset visible count when category changes
+  useEffect(() => {
+    setVisibleCount(12);
+  }, [activeCategory]);
+
+  const handleLoadMore = () => {
+    setVisibleCount(prev => prev + 12);
+  };
 
   // Handle item click
   const handleItemClick = (item) => {
@@ -455,10 +465,9 @@ const Gallery = () => {
           </div>
         </section>
 
-        {/* Main Gallery Grid */}
         <section className="py-8 md:py-12 px-4 container mx-auto animate-fade-in-up">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
-            {filteredItems.map((item, index) => (
+            {filteredItems.slice(0, visibleCount).map((item, index) => (
               <GalleryCard
                 key={item.id}
                 item={item}
@@ -467,51 +476,19 @@ const Gallery = () => {
               />
             ))}
           </div>
+
+          {visibleCount < filteredItems.length && (
+            <div className="flex justify-center mt-12">
+              <button
+                onClick={handleLoadMore}
+                className="px-8 py-3 bg-gray-800 hover:bg-gray-700 border border-gray-700 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105"
+              >
+                Load More Projects
+              </button>
+            </div>
+          )}
         </section>
 
-        {activeCategory === 'all' && (
-          <>
-            {/* Workshop Section */}
-            <CuratedSection
-              title="Workshop Sessions (8 Sessions)"
-              items={workshopImages}
-              columns={4}
-              onClick={handleItemClick}
-            />
-
-            {/* Internship Section */}
-            <CuratedSection
-              title="Internship Program (17 Cohorts)"
-              items={internshipImages}
-              columns={4}
-              onClick={handleItemClick}
-            />
-
-            {/* Project Services Section */}
-            <CuratedSection
-              title="Project Services (19 Projects)"
-              items={projectImages}
-              columns={4}
-              onClick={handleItemClick}
-            />
-
-            {/* 3D Printing Section */}
-            <CuratedSection
-              title="3D Printing Hub (13 Models)"
-              items={printingImages}
-              columns={4}
-              onClick={handleItemClick}
-            />
-
-            {/* Videos Section */}
-            <CuratedSection
-              title="Video Demonstrations"
-              items={galleryItems.filter(i => i.type === 'video')}
-              columns={4}
-              onClick={handleItemClick}
-            />
-          </>
-        )}
 
 
 
