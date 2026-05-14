@@ -433,37 +433,41 @@ const Gallery = () => {
           </div>
         </section>
 
-        {/* Workshop Section */}
-        <CuratedSection
-          title="Workshop Sessions (8 Sessions)"
-          items={workshopImages}
-          columns={4}
-          onClick={handleItemClick}
-        />
+        {activeCategory === 'all' && (
+          <>
+            {/* Workshop Section */}
+            <CuratedSection
+              title="Workshop Sessions (8 Sessions)"
+              items={workshopImages}
+              columns={4}
+              onClick={handleItemClick}
+            />
 
-        {/* Internship Section */}
-        <CuratedSection
-          title="Internship Program (17 Cohorts)"
-          items={internshipImages}
-          columns={4}
-          onClick={handleItemClick}
-        />
+            {/* Internship Section */}
+            <CuratedSection
+              title="Internship Program (17 Cohorts)"
+              items={internshipImages}
+              columns={4}
+              onClick={handleItemClick}
+            />
 
-        {/* Project Services Section */}
-        <CuratedSection
-          title="Project Services (19 Projects)"
-          items={projectImages}
-          columns={4}
-          onClick={handleItemClick}
-        />
+            {/* Project Services Section */}
+            <CuratedSection
+              title="Project Services (19 Projects)"
+              items={projectImages}
+              columns={4}
+              onClick={handleItemClick}
+            />
 
-        {/* Videos Section */}
-        <CuratedSection
-          title="Video Demonstrations"
-          items={galleryItems.filter(i => i.type === 'video')}
-          columns={4}
-          onClick={handleItemClick}
-        />
+            {/* Videos Section */}
+            <CuratedSection
+              title="Video Demonstrations"
+              items={galleryItems.filter(i => i.type === 'video')}
+              columns={4}
+              onClick={handleItemClick}
+            />
+          </>
+        )}
 
 
 
