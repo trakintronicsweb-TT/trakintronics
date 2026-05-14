@@ -93,7 +93,7 @@ const ProjectBooking = () => {
   // ============================================================================
   // CONSTANTS & CONFIGURATION
   // ============================================================================
-  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwI_DL8lg9COMVTa30REpfnI54l2zdU9fTOAA9Kxm81-4H90nAo4FznTQ0OekArxTydew/exec';
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbytSqCmLNixXxl5HzDTXmcl1oX_KL4fV0496YMCz7X8zHRrDhXpBy6hNx3R84RgRB-S-w/exec';
 
   const projectTypes = [
     { id: "major", name: "Major Project" },
@@ -326,7 +326,9 @@ const ProjectBooking = () => {
       });
 
       // Add a success flag for debugging
-      const refId = `TT-${Date.now().toString().slice(-8)}`;
+      const currentYear = new Date().getFullYear();
+      const randomId = Math.floor(10000 + Math.random() * 90000); // 5 digit random number
+      const refId = `${currentYear}/TTP/${randomId}`;
       formDataToSend.append('referenceId', refId);
 
       console.log('🚀 STEP 4: Sending FormData to Google Script...');
@@ -398,7 +400,9 @@ const ProjectBooking = () => {
 
         if (altText.includes('success') || altText.includes('Success') || altResponse.ok) {
           console.log('✅ Alternative submission successful!');
-          const refId = `TT-ALT-${Date.now().toString().slice(-8)}`;
+          const currentYear = new Date().getFullYear();
+          const randomId = Math.floor(10000 + Math.random() * 90000);
+          const refId = `${currentYear}/TTP/${randomId}-ALT`;
           setReferenceId(refId);
           setIsSuccess(true);
 
@@ -480,10 +484,10 @@ Comments: ${formData.comments || 'None'}
 
     setErrors(prev => ({
       ...prev,
-      submit: "Failed to submit. Please copy the details below and email to trakintronicssupport@gmail.com"
+      submit: "Failed to submit. Please copy the details below and email to trakintronicsweb@gmail.com"
     }));
 
-    alert(`⚠️ Submission Failed!\n\nPlease copy these details and email to: trakintronicssupport@gmail.com\n\n${manualDetails}`);
+    alert(`⚠️ Submission Failed!\n\nPlease copy these details and email to: trakintronicsweb@gmail.com\n\n${manualDetails}`);
   };
 
   // ============================================================================
@@ -1331,7 +1335,7 @@ Comments: ${formData.comments || 'None'}
                     `.trim();
 
                     navigator.clipboard.writeText(details);
-                    alert('Details copied! Please email to: trakintronicssupport@gmail.com');
+                    alert('Details copied! Please email to: trakintronicsweb@gmail.com');
                   }}
                 >
                   📋 Copy Details for Manual Submission
@@ -1344,7 +1348,7 @@ Comments: ${formData.comments || 'None'}
         {connectionStatus === 'error' && (
           <div className="connection-warning mt-3">
             <AlertTriangle className="w-5 h-5" />
-            <span>Connection issues detected. If submission fails, please email details to trakintronicssupport@gmail.com</span>
+            <span>Connection issues detected. If submission fails, please email details to trakintronicsweb@gmail.com</span>
           </div>
         )}
 
@@ -1404,7 +1408,7 @@ Comments: ${formData.comments || 'None'}
       <div className="reference-highlight">
         <div className="reference-label">Your Booking Reference ID:</div>
         <div className="reference-value">
-          {referenceId || `TT-${Date.now().toString().slice(-8)}`}
+          {referenceId || `${new Date().getFullYear()}/TTP/${Math.floor(10000 + Math.random() * 90000)}`}
         </div>
         <div className="reference-hint">
           <AlertCircle className="w-4 h-4" />
@@ -1474,7 +1478,7 @@ Comments: ${formData.comments || 'None'}
             <div className="detail-content">
               <div className="detail-label">Email Sent To</div>
               <div className="detail-value">
-                You & trakintronicssupport@gmail.com
+                You & trakintronicsweb@gmail.com
               </div>
             </div>
           </div>
@@ -1585,23 +1589,23 @@ Comments: ${formData.comments || 'None'}
             </div>
           </a>
 
-          <a href="mailto:trakintronicssupport@gmail.com" className="contact-card email">
+          <a href="mailto:trakintronicsweb@gmail.com" className="contact-card email">
             <div className="contact-icon">
               <Mail className="w-6 h-6" />
             </div>
             <div className="contact-content">
               <div className="contact-label">Email Us</div>
-              <div className="contact-value">trakintronicssupport@gmail.com</div>
+              <div className="contact-value">trakintronicsweb@gmail.com</div>
             </div>
           </a>
 
-          <a href="mailto:trakintronics@gmail.com" className="contact-card email">
+          <a href="mailto:trakintronicsweb@gmail.com" className="contact-card email">
             <div className="contact-icon">
               <Mail className="w-6 h-6" />
             </div>
             <div className="contact-content">
               <div className="contact-label">Alternate Email</div>
-              <div className="contact-value">trakintronics@gmail.com</div>
+              <div className="contact-value">trakintronicsweb@gmail.com</div>
             </div>
           </a>
         </div>
@@ -1784,7 +1788,7 @@ Comments: ${formData.comments || 'None'}
                   <strong>Contact:</strong> +91 8767841367 / +91 7721892429
                 </p>
                 <p className="contact-text">
-                  <strong>Email:</strong> trakintronicssupport@gmail.com
+                  <strong>Email:</strong> trakintronicsweb@gmail.com
                 </p>
               </div>
 
@@ -1793,7 +1797,7 @@ Comments: ${formData.comments || 'None'}
                   <Phone className="w-4 h-4" />
                   Call Now
                 </a>
-                <a href="mailto:trakintronicssupport@gmail.com" className="contact-button email">
+                <a href="mailto:trakintronicsweb@gmail.com" className="contact-button email">
                   <Mail className="w-4 h-4" />
                   Email Us
                 </a>

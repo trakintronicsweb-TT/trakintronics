@@ -13,7 +13,7 @@ import { Helmet } from 'react-helmet-async';
 // SEO Component
 const SEOHead = () => {
   const businessName = "TRAKIN TRONICS";
-  const businessEmail = "trakintronicssupport@gmail.com";
+  const businessEmail = "trakintronicsweb@gmail.com";
   const businessPhone = "+918767841367";
   const businessAddress = "Amravati, Maharashtra - 444601";
   const businessUrl = "https://trkintronics.com/contact";
@@ -223,7 +223,7 @@ const MapSection = lazy(() => Promise.resolve({
               </div>
               <div className="text-left md:text-right mt-2 md:mt-0">
                 <p className="text-xs md:text-sm text-gray-300">Email:</p>
-                <p className="text-xs md:text-sm font-bold text-cyan-400 break-words">trakintronicssupport@gmail.com</p>
+                <p className="text-xs md:text-sm font-bold text-cyan-400 break-words">trakintronicsweb@gmail.com</p>
               </div>
             </div>
           </div>
@@ -236,7 +236,7 @@ const MapSection = lazy(() => Promise.resolve({
 // Constants - Single Source of Truth
 const BUSINESS_INFO = {
   name: "TRAKIN TRONICS",
-  email: "trakintronicssupport@gmail.com",
+  email: "trakintronicsweb@gmail.com",
   phone: {
     display: "87678 41367",
     formatted: "918767841367",
