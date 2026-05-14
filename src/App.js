@@ -8,7 +8,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 // Lazy load pages for better performance
-import Home from './pages/Home';
+const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
 const Gallery = lazy(() => import('./pages/Gallery'));
@@ -45,7 +45,7 @@ function App() {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      once: false,
+      once: true,
     });
   }, []);
 
