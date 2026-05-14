@@ -248,52 +248,74 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section - UPDATED */}
-      <section className="py-20 px-6">
+      {/* Expertise Section - REDESIGNED */}
+      <section className="py-24 px-4 md:px-6 relative overflow-hidden">
+        {/* Background Accents */}
+        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-cyan-500/5 rounded-full blur-[100px] -z-10" />
+        <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-purple-500/5 rounded-full blur-[100px] -z-10" />
+
         <div className="container mx-auto max-w-7xl">
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Our <span className="animate-gradient">Expertise</span>
+            <div className="inline-block px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-bold tracking-widest uppercase mb-6">
+              Our Expertise
+            </div>
+            <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight">
+              Comprehensive <span className="animate-gradient">Electronics</span> Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive electronics solutions tailored for students, professionals, and industries
+            <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+              From academic support to industrial automation, we provide end-to-end expertise 
+              that bridge the gap between theoretical knowledge and practical innovation.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: feature.delay }}
+                transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className={`glass card-hover glow-border rounded-3xl p-8 ${feature.bg}`}
+                className={`group relative glass rounded-[2.5rem] p-8 md:p-10 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20 overflow-hidden ${feature.bg}`}
               >
-                <div className={`${feature.color} mb-6`}>
-                  {feature.icon}
+                {/* Decorative Gradient Background on Hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                {/* Icon Container */}
+                <div className={`relative w-20 h-20 rounded-2xl flex items-center justify-center mb-8 bg-black/20 backdrop-blur-md border border-white/10 group-hover:scale-110 transition-transform duration-500 ${feature.color}`}>
+                   <div className="absolute inset-0 bg-current opacity-10 rounded-2xl blur-xl group-hover:opacity-20 transition-opacity" />
+                   {React.cloneElement(feature.icon, { className: "w-10 h-10 relative z-10" })}
                 </div>
-                <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
 
-                {/* UPDATED: Learn More button with navigation */}
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 group-hover:text-cyan-400 transition-colors">
+                  {feature.title}
+                </h3>
+                
+                <p className="text-gray-400 leading-relaxed mb-8 group-hover:text-gray-300 transition-colors">
+                  {feature.description}
+                </p>
+
+                {/* Interactive Action Area */}
                 <motion.div
                   onClick={handleLearnMoreClick}
-                  className="mt-6 flex items-center gap-2 text-sm cursor-pointer group"
-                  whileHover={{ x: 5 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  className="flex items-center justify-between pt-6 border-t border-white/5 cursor-pointer"
                 >
-                  <span className={`${feature.color} group-hover:underline transition-all duration-300`}>
-                    Learn more
+                  <span className={`text-sm font-bold uppercase tracking-wider ${feature.color}`}>
+                    Discover More
                   </span>
-                  <ArrowRight className={`w-4 h-4 ${feature.color} group-hover:translate-x-1 transition-transform duration-300`} />
+                  <div className={`w-10 h-10 rounded-full flex items-center justify-center border border-white/10 group-hover:bg-current group-hover:border-transparent transition-all duration-300`}>
+                    <ArrowRight className={`w-5 h-5 group-hover:text-black transition-colors`} />
+                  </div>
                 </motion.div>
+
+                {/* Animated Border Glow */}
+                <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent w-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
               </motion.div>
             ))}
           </div>

@@ -1788,7 +1788,7 @@ Comments: ${formData.comments || 'None'}
                   <strong>Contact:</strong> +91 8767841367 / +91 7721892429
                 </p>
                 <p className="contact-text">
-                  <strong>Email:</strong> trakintronicsweb@gmail.com
+                  <strong>Email:</strong> trakintronicssupport@gmail.com
                 </p>
               </div>
 
@@ -1797,7 +1797,7 @@ Comments: ${formData.comments || 'None'}
                   <Phone className="w-4 h-4" />
                   Call Now
                 </a>
-                <a href="mailto:trakintronicsweb@gmail.com" className="contact-button email">
+                <a href="mailto:trakintronicssupport@gmail.com" className="contact-button email">
                   <Mail className="w-4 h-4" />
                   Email Us
                 </a>

@@ -245,6 +245,27 @@
   }
 }
 
+/* Expertise Card Styles */
+.expertise-card {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(20px);
+}
+
+.expertise-card:hover {
+  transform: translateY(-12px);
+  background: rgba(15, 23, 42, 0.8);
+}
+
+.icon-box {
+  transition: all 0.5s ease;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.group:hover .icon-box {
+  transform: scale(1.1) rotate(5deg);
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
