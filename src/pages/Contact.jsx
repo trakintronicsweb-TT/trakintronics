@@ -223,7 +223,7 @@ const MapSection = lazy(() => Promise.resolve({
               </div>
               <div className="text-left md:text-right mt-2 md:mt-0">
                 <p className="text-xs md:text-sm text-gray-300">Email:</p>
-                <p className="text-xs md:text-sm font-bold text-cyan-400 break-words">trakintronicsweb@gmail.com</p>
+                <p className="text-xs md:text-sm font-bold text-cyan-400 break-words">trakintronicssupport@gmail.com</p>
               </div>
             </div>
           </div>
@@ -236,7 +236,7 @@ const MapSection = lazy(() => Promise.resolve({
 // Constants - Single Source of Truth
 const BUSINESS_INFO = {
   name: "TRAKIN TRONICS",
-  email: "trakintronicsweb@gmail.com",
+  email: "trakintronicssupport@gmail.com",
   phone: {
     display: "87678 41367",
     formatted: "918767841367",
@@ -713,7 +713,7 @@ export default function Contact() {
       <SEOHead />
       <MobileNavigation />
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}

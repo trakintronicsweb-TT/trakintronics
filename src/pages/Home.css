@@ -1,4 +1,4 @@
-﻿/* ========================================================
+/* ========================================================
    HOME.CSS – Premium Dark Theme Edition
    Matches About & Contact page style
    ======================================================== */
@@ -269,9 +269,63 @@
   color: white;
 }
 
+/* Why Choose Us Redesign Styles */
+.tech-visualizer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.hub-glow {
+  filter: drop-shadow(0 0 15px rgba(6, 182, 212, 0.4));
+}
+
+.reason-card {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+}
+
+.reason-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    800px circle at var(--mouse-x, 0) var(--mouse-y, 0),
+    rgba(255, 255, 255, 0.06),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+}
+
+.reason-card:hover::before {
+  opacity: 1;
+}
+
+.reason-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  background: rgba(30, 41, 59, 0.6);
+  box-shadow: 
+    0 20px 40px -10px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(6, 182, 212, 0.1);
+}
+
+@keyframes float-badge {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+.badge-float {
+  animation: float-badge 6s infinite ease-in-out;
+}
+
 /* Smooth Transitions */
 * {
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Focus Styles */
